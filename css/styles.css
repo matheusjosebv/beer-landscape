@@ -1,0 +1,393 @@
+.hero {
+  background: var(--first-color);
+  padding: 75px 25px 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero .text-wrapper .subtitle {
+  font-size: 20px;
+}
+
+.hero .text-wrapper .title {
+  margin: 20px 0 0;
+  font-size: 32px;
+}
+
+.hero .text-wrapper .description {
+  margin: 20px 0 0;
+  font-size: 15px;
+}
+
+.hero .text-wrapper .button {
+  padding: 15px;
+  border-radius: 2px;
+}
+
+.hero .text-wrapper .first {
+  width: 100%;
+  background: var(--ninth-color);
+  color: var(--fifth-color);
+  margin: 30px 0 0;
+}
+
+.hero .text-wrapper .second {
+  width: 100%;
+  background: var(--fifth-color);
+  color: var(--third-color);
+  margin: 20px 0 0;
+}
+
+.hero .img-wrapper {
+  margin: 50px 0 0;
+}
+
+.hero .img-wrapper .img {
+  width: 100%;
+}
+
+.about {
+  background: var(--seventh-color);
+  padding: 50px 25px;
+}
+
+.about .img-wrapper {
+  position: relative;
+}
+
+.about .img-wrapper .img-background {
+  background: var(--first-color);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+}
+
+.about .img-wrapper .img {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.about .text-wrapper .title {
+  text-align: center;
+  margin: 50px 0 0;
+  font-size: 28px;
+}
+
+.about .text-wrapper .description {
+  text-align: center;
+  margin: 25px 0 0;
+  font-size: 15px;
+}
+
+.about .dates {
+}
+
+.about .dates .date {
+  text-align: center;
+  margin: 50px 0 0;
+}
+
+.about .dates .date .number {
+}
+
+.about .dates .date .divider {
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+}
+
+.about .dates .date .divider svg {
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.about .dates .date .divider::after,
+.about .dates .date .divider::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--forth-color);
+}
+
+.about .dates .date .description {
+  padding: 0 50px;
+  font-size: 15px;
+}
+
+.flavors {
+  background: var(--fifth-color);
+}
+
+.flavors .intro {
+  text-align: center;
+  padding: 50px 25px;
+}
+
+.flavors .intro .title {
+  font-size: 28px;
+}
+
+.flavors .intro .description {
+  margin: 25px 0 0;
+}
+
+.flavors .beer {
+}
+
+.flavors .beer .img {
+  width: 100%;
+  padding: 50px 25px;
+}
+
+.flavors .beer .text {
+  background: var(--seventh-color);
+  padding: 50px 25px;
+}
+
+.flavors .beer .text .subtitle {
+  font-size: 16px;
+}
+
+.flavors .beer .text .title {
+  margin: 25px 0 0;
+  font-size: 22px;
+}
+
+.flavors .beer .text .description {
+  margin: 25px 0 50px;
+}
+
+.flavors .beer .text .traits {
+  margin: 30px 0 0;
+  display: flex;
+}
+
+.flavors .beer .text .traits .element {
+  width: 50%;
+}
+
+.flavors .beer .text .traits .element .name {
+  font-size: 16px;
+}
+
+.flavors .beer .text .traits .element .content {
+}
+
+.features {
+  text-align: center;
+  padding: 50px 25px;
+}
+
+.features .intro {
+}
+
+.features .intro .title {
+}
+
+.features .intro .description {
+  margin: 25px 0 0;
+}
+
+.features .ingredients {
+  margin: 50px 0 0;
+}
+
+.features .ingredients .img {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.features .ingredients .first-group {
+  margin: 75px 0 0;
+}
+
+.features .ingredients .first-group .content {
+  margin: 50px 0 0;
+}
+
+.features .ingredients .first-group .content .icon {
+  width: 80px;
+}
+
+.features .ingredients .first-group .content .description {
+  margin: 5px 0 0;
+}
+
+.features .ingredients .second-group {
+  margin: 50px 0 0;
+}
+
+.features .ingredients .second-group .content {
+  margin: 40px 0 0;
+}
+
+.features .ingredients .second-group .content .icon {
+  width: 50px;
+}
+
+.features .ingredients .second-group .content .description {
+  margin: 5px 50px 0;
+}
+
+.features .choose .img {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.features .choose {
+  padding: 75px 0 0;
+}
+
+.features .choose .img {
+}
+.features .choose .text {
+  margin: 75px 0 0;
+  text-align: center;
+}
+.features .choose .text .title {
+}
+.features .choose .text .description {
+  margin: 25px 0 0;
+}
+
+.features .choose .text .wrapper {
+  padding: 50px 50px 0;
+}
+
+.features .choose .text .wrapper .button {
+  padding: 15px;
+  border-radius: 2px;
+  width: 100%;
+  background: var(--first-color);
+  color: var(--third-color);
+}
+
+.footer {
+}
+
+.footer .discover {
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: url("../images/background-1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.footer .discover .background {
+  background-color: transparent;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.671) 0%,
+    rgba(0, 0, 0, 0.671) 100%
+  );
+  padding: 50px 25px;
+}
+
+.footer .discover .background h1,
+.footer .discover .background p {
+  color: var(--fifth-color);
+}
+
+.footer .discover .background h1 {
+  font-size: 28px;
+}
+
+.footer .discover .background p {
+  margin: 25px 0 0;
+}
+
+.footer .discover .background .videoplay {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: var(--first-color);
+  margin: 30px 0 0;
+}
+
+.footer .social-media {
+  padding: 50px 25px;
+  text-align: center;
+}
+
+.footer .social-media .title {
+  font-size: 28px;
+}
+
+.footer .social-media .button {
+  padding: 15px;
+  border-radius: 2px;
+  width: 100%;
+  background: var(--first-color);
+  color: var(--third-color);
+  margin: 50px 0 0;
+}
+
+.footer .social-media .img-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0 0;
+}
+
+.footer .social-media .img-wrapper img {
+  width: 31%;
+}
+
+.footer .get {
+  background: url("../images/background-2.jpeg");
+}
+
+.footer .contact {
+  background: url("../images/background-3.jpeg");
+}
+
+.footer .link {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+}
+
+.footer .link .background {
+  background-color: transparent;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.671) 0%,
+    rgba(0, 0, 0, 0.671) 100%
+  );
+  padding: 50px 25px;
+}
+
+.footer .link .background .title {
+  font-size: 28px;
+  color: var(--fifth-color);
+}
+
+.footer .link .background .description {
+  margin: 50px 0 0;
+  color: var(--fifth-color);
+}
+
+.footer .link .background .button {
+  margin: 50px 0 0;
+  padding: 15px 30px;
+  border-radius: 2px;
+  /* width: 100%; */
+  background: var(--first-color);
+  color: var(--third-color);
+  margin: 50px 0 0;
+}

@@ -1,0 +1,87 @@
+:root {
+  --first-color: #f3c242;
+  --second-color: #f9b301;
+  --third-color: #1e1810; /* #3a3a3a */
+  --forth-color: #62615c; /* #4b4f58  */
+  --fifth-color: #ffffff;
+  --sixth-color: #f5f7f9;
+  --seventh-color: #95959517;
+  --eighth-color: #bfd1ff;
+  --ninth-color: #312f2b;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+dl,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  color: currentColor;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: inherit;
+  text-align: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+h1,
+button {
+  font-family: "Bungee";
+  color: var(--third-color);
+  line-height: 1.2em;
+  font-weight: 100;
+}
+
+p {
+  font-family: "Cairo";
+  color: var(--forth-color);
+  font-weight: 500;
+}
