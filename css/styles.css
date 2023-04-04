@@ -426,9 +426,14 @@
     text-align: left;
   }
 
+  .about .wrapper .text-container .title {
+    margin: 0;
+  }
+
   .about .dates {
     display: flex;
     flex-direction: row;
+    margin: 50px 0 0;
   }
 
   .about .dates .date .description {
@@ -450,6 +455,8 @@
   .flavors .beer .img-wrapper {
     width: 50%;
     padding: 80px;
+    display: flex;
+    align-items: center;
   }
 
   .flavors .beer .text {
@@ -519,6 +526,10 @@
 
   .features .choose .img {
     width: 55%;
+  }
+
+  .features .choose .text {
+    margin: 0;
   }
 
   .features .choose .text .wrapper .btn {
@@ -703,5 +714,27 @@
 
   .footer .social-media .img-wrapper img {
     width: 18%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .hero {
+    padding: 120px 100px;
+  }
+
+  .hero .text-wrapper {
+    max-width: 600px;
+  }
+
+  .about {
+    padding: 120px 100px;
+  }
+
+  .features {
+    padding: 120px 100px;
+  }
+
+  .footer .social-media {
+    padding: 120px 100px;
   }
 }
