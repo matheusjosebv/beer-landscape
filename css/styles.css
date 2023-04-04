@@ -1,23 +1,21 @@
 .hero {
   background: var(--first-color);
   padding: 75px 25px 50px;
-  display: flex;
-  flex-direction: column;
   text-align: center;
 }
 
-.hero .text-wrapper h1 {
-  margin: 20px 0 0;
-}
-
+.hero .text-wrapper h1,
 .hero .text-wrapper .description {
   margin: 20px 0 0;
-  font-size: 15px;
 }
 
-.hero .text-wrapper .button {
-  padding: 15px;
-  border-radius: 2px;
+.hero .text-wrapper .btn {
+  text-align: center;
+}
+
+.hero .text-wrapper .btn:hover {
+  background: var(--third-color);
+  color: var(--fifth-color);
 }
 
 .hero .text-wrapper .first {
@@ -45,11 +43,6 @@
 .about {
   background: var(--seventh-color);
   padding: 50px 25px;
-}
-
-.about .wrapper {
-  display: flex;
-  flex-direction: column;
 }
 
 .about .wrapper .img-container {
@@ -82,11 +75,6 @@
 
 .about .wrapper .text-container .description {
   margin: 25px 0 0;
-}
-
-.about .dates {
-  display: flex;
-  flex-direction: column;
 }
 
 .about .dates .date {
@@ -134,14 +122,13 @@
   margin: 25px 0 0;
 }
 
-.flavors .beer {
-  display: flex;
-  flex-direction: column;
+.flavors .beer .img-wrapper {
+  padding: 50px 20%;
+  width: 100%;
 }
 
-.flavors .beer .img {
+.flavors .beer .img-wrapper .img {
   width: 100%;
-  padding: 50px 20%;
 }
 
 .flavors .beer .text {
@@ -151,6 +138,10 @@
 
 .flavors .beer .text .title {
   margin: 25px 0 0;
+}
+
+.flavors .beer .text .yellow {
+  color: var(--first-color);
 }
 
 .flavors .beer .text .description {
@@ -180,10 +171,8 @@
 }
 
 .features .ingredients .wrapper {
-  display: flex;
-  flex-direction: column;
+  padding: 50px 0 0;
 }
-
 .features .ingredients .wrapper .img {
   display: flex;
   margin: 0 auto;
@@ -196,8 +185,6 @@
 
 .features .ingredients .wrapper .first-group .content {
   margin: 50px 0 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .features .ingredients .wrapper .first-group .content .icon {
@@ -210,14 +197,10 @@
 
 .features .ingredients .second-group {
   margin: 50px 0 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .features .ingredients .second-group .content {
   margin: 40px 0 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .features .ingredients .second-group .content .icon {
@@ -250,12 +233,15 @@
   padding: 50px 50px 0;
 }
 
-.features .choose .text .wrapper .button {
-  padding: 15px;
-  border-radius: 2px;
+.features .choose .text .wrapper .btn {
   width: 100%;
   background: var(--first-color);
   color: var(--third-color);
+}
+
+.features .choose .text .wrapper .btn:hover {
+  background: var(--third-color);
+  color: var(--fifth-color);
 }
 
 .footer .discover {
@@ -303,13 +289,26 @@
   text-align: center;
 }
 
-.footer .social-media .button {
-  padding: 15px;
-  border-radius: 2px;
+.footer .social-media .wrapper .btn {
   width: 100%;
   background: var(--first-color);
   color: var(--third-color);
   margin: 50px 0 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer .social-media .wrapper .btn:hover {
+  background: var(--third-color);
+  color: var(--fifth-color);
+}
+
+.footer .social-media .wrapper .btn svg {
+  width: 15px;
+  height: 15px;
 }
 
 .footer .social-media .img-wrapper {
@@ -318,26 +317,34 @@
   margin: 50px 0 0;
 }
 
+.footer .social-media .img-wrapper .img-tablet {
+  display: none;
+}
+
+.footer .social-media .img-wrapper .img-desktop {
+  display: none;
+}
+
 .footer .social-media .img-wrapper img {
   width: 31%;
 }
 
-.footer .wrapper .get {
+.footer .link-wrapper .get {
   background: url("../images/background-2.jpeg");
 }
 
-.footer .wrapper .contact {
+.footer .link-wrapper .contact {
   background: url("../images/background-3.jpeg");
 }
 
-.footer .wrapper .link {
+.footer .link-wrapper .link {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
 }
 
-.footer .wrapper .link .background {
+.footer .link-wrapper .link .background {
   background-color: transparent;
   background-image: linear-gradient(
     180deg,
@@ -348,26 +355,30 @@
   height: 100%;
 }
 
-.footer .wrapper .link .background .title {
+.footer .link-wrapper .link .background .title {
   color: var(--fifth-color);
 }
 
-.footer .wrapper .link .background .description {
+.footer .link-wrapper .link .background .description {
   margin: 50px 0 0;
   color: var(--fifth-color);
 }
 
-.footer .wrapper .link .background .button {
+.footer .link-wrapper .link .background .btn {
   margin: 50px 0 0;
   padding: 15px 30px;
-  border-radius: 2px;
   background: var(--first-color);
   color: var(--third-color);
-  margin: 50px 0 0;
+}
+
+.footer .link-wrapper .link .background .btn:hover {
+  background: var(--fifth-color);
+  color: var(--third-color);
 }
 
 @media only screen and (min-width: 770px) {
   .hero {
+    display: flex;
     flex-direction: row;
     text-align: left;
     padding: 75px 40px;
@@ -378,13 +389,18 @@
     width: 100%;
   }
 
-  .hero .text-wrapper .button {
+  .hero .text-wrapper .btn {
     text-align: center;
     width: 230px;
+    margin: 30px 25px 0 0;
+  }
+
+  .hero .text-wrapper .second {
+    margin: 15px 0 0;
   }
 
   .hero .img-wrapper {
-    margin: 0;
+    margin: auto 0;
   }
 
   .about {
@@ -392,29 +408,26 @@
   }
 
   .about .wrapper {
+    display: flex;
     flex-direction: row;
     gap: 75px;
   }
 
   .about .wrapper .img-container {
     width: 50%;
+    margin: 0 0 auto 0;
   }
 
   .about .wrapper .img-container .img {
-    width: 40vw;
-    height: calc(40vw / 1.5);
-  }
-
-  .about .wrapper .img-container .img-shadow {
-    height: calc(40vw / 1.5);
+    width: 45vw;
   }
 
   .about .wrapper .text-container {
-    width: 50%;
     text-align: left;
   }
 
   .about .dates {
+    display: flex;
     flex-direction: row;
   }
 
@@ -427,18 +440,20 @@
   }
 
   .flavors .beer {
+    display: flex;
     flex-direction: row;
   }
   .flavors .reverse {
     flex-direction: row-reverse;
   }
 
-  .flavors .beer .img {
+  .flavors .beer .img-wrapper {
     width: 50%;
     padding: 80px;
   }
 
   .flavors .beer .text {
+    width: 50%;
     padding: 50px;
   }
 
@@ -446,19 +461,28 @@
     padding: 75px 40px;
   }
   .features .ingredients .wrapper {
+    display: flex;
     flex-direction: row;
   }
 
-  .features .ingredients .wrapper .img {
+  .features .ingredients .wrapper .img-wrapper {
     width: 50%;
-    padding: 40px 20px;
+  }
+  .features .ingredients .wrapper .img-wrapper .img {
+    margin: 0;
+    width: 100%;
   }
 
   .features .ingredients .wrapper .first-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
     margin: 0;
   }
 
   .features .ingredients .wrapper .first-group .content {
+    display: flex;
     flex-direction: row;
     gap: 10px;
     text-align: left;
@@ -470,12 +494,14 @@
   }
 
   .features .ingredients .second-group {
+    display: flex;
     flex-direction: row;
-    margin: 30px 0 0;
+    margin: 50px 0 0;
   }
   .features .ingredients .second-group .content {
-    margin: 0;
+    display: flex;
     flex-direction: row;
+    margin: 0;
   }
 
   .features .ingredients .second-group .content .icon {
@@ -495,7 +521,7 @@
     width: 55%;
   }
 
-  .features .choose .text .wrapper .button {
+  .features .choose .text .wrapper .btn {
     width: 250px;
   }
 
@@ -503,14 +529,179 @@
     padding: 100px 120px;
   }
 
-  .footer .wrapper {
+  .footer .social-media {
+    padding: 75px 40px;
+  }
+
+  .footer .social-media .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
-  .footer .wrapper .button {
+  .footer .social-media .wrapper .btn {
     margin: 0;
     width: 300px;
+  }
+
+  .footer .social-media .img-wrapper .img-tablet {
+    display: flex;
+  }
+
+  .footer .social-media .img-wrapper img {
+    width: 23%;
+  }
+
+  .footer .link-wrapper {
+    display: flex;
+  }
+
+  .footer .link-wrapper .background .link .btn {
+    margin: 0;
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .hero {
+    padding: 100px 60px;
+  }
+
+  .hero .img-wrapper {
+    margin: auto 0;
+  }
+
+  .about {
+    padding: 100px 60px;
+  }
+
+  .about .wrapper {
+    gap: 100px;
+  }
+
+  .about .wrapper .img-container .img {
+    width: 40vw;
+    max-width: 500px;
+  }
+
+  .about .wrapper .img-container {
+    margin: auto 0;
+  }
+
+  .about .dates {
+    margin: 50px 0 0;
+  }
+
+  .flavors {
+    padding: 100px 10%;
+  }
+
+  .flavors .intro {
+    margin: 0 0 100px 0;
+  }
+
+  .flavors .beer .img-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .flavors .beer .img-wrapper .img {
+    width: 100%;
+    max-width: 413px;
+  }
+
+  .features {
+    padding: 100px 60px;
+  }
+
+  .features .ingredients .wrapper {
+    padding: 100px 0 0;
+  }
+
+  .features .ingredients .wrapper .img-wrapper {
+    width: 50%;
+  }
+
+  .features .ingredients .wrapper .img-wrapper .img {
+    width: 340px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .features .ingredients .wrapper .first-group {
+    width: 50%;
+  }
+
+  .features .ingredients .second-group {
+    justify-content: space-between;
+    padding: 0 0 100px 0;
+  }
+
+  .features .ingredients .second-group .content .description {
+    width: 220px;
+  }
+
+  .features .choose {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+  }
+
+  .features .choose .img-wrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .features .choose .img-wrapper .img {
+    margin: 0;
+    width: 440px;
+  }
+
+  .features .choose .text {
+    width: 50%;
+    text-align: left;
+  }
+
+  .features .choose .text .wrapper {
+    padding: 50px 0 0;
+  }
+  .features .choose .text .wrapper .btn {
+    text-align: center;
+  }
+
+  .footer .discover {
+    background-attachment: fixed;
+  }
+
+  .footer .discover .background {
+    width: 100%;
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .discover .background .title,
+  .footer .discover .background .description {
+    width: 560px;
+  }
+
+  .footer .social-media {
+    padding: 100px 60px;
+  }
+
+  .footer .social-media .wrapper .btn {
+    gap: 10px;
+  }
+
+  .footer .social-media .img-wrapper .img-desktop {
+    display: flex;
+  }
+
+  .footer .social-media .img-wrapper img {
+    width: 18%;
   }
 }
