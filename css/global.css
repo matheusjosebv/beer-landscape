@@ -1,14 +1,4 @@
-:root {
-  --first-color: #f3c242;
-  --second-color: #f9b301;
-  --third-color: #1e1810; /* #3a3a3a */
-  --forth-color: #62615c; /* #4b4f58  */
-  --fifth-color: #ffffff;
-  --sixth-color: #f5f7f9;
-  --seventh-color: #95959517;
-  --eighth-color: #bfd1ff;
-  --ninth-color: #312f2b;
-}
+/* REMOVING DEFAULTS CONFIGS */
 
 html {
   box-sizing: border-box;
@@ -21,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
   word-break: keep-all;
+  overflow-x: hidden;
 }
 
 *,
@@ -72,7 +63,26 @@ button {
   text-transform: inherit;
 }
 
+/* SETTING GLOBAL CONFIGS */
+
+:root {
+  --first-color: #f3c242;
+  --second-color: #f9b301;
+  --third-color: #1e1810;
+  --forth-color: #62615c;
+  --fifth-color: #ffffff;
+  --sixth-color: #f5f7f9;
+  --seventh-color: #95959517;
+  --eighth-color: #bfd1ff;
+  --ninth-color: #312f2b;
+}
+
 h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 button {
   font-family: "Bungee";
   color: var(--third-color);
@@ -80,8 +90,85 @@ button {
   font-weight: 100;
 }
 
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
 p {
   font-family: "Cairo";
   color: var(--forth-color);
   font-weight: 500;
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 545px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 32px;
+  }
+
+  h5 {
+    font-size: 22px;
+  }
+
+  h6 {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  h1 {
+    font-size: 62px;
+  }
+
+  h2 {
+    font-size: 56px;
+  }
+
+  h3 {
+    font-size: 36px;
+  }
+
+  h4 {
+    font-size: 46px;
+  }
+
+  h5 {
+    font-size: 26px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
 }

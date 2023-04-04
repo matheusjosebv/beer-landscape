@@ -6,13 +6,8 @@
   text-align: center;
 }
 
-.hero .text-wrapper .subtitle {
-  font-size: 20px;
-}
-
-.hero .text-wrapper .title {
+.hero .text-wrapper h1 {
   margin: 20px 0 0;
-  font-size: 32px;
 }
 
 .hero .text-wrapper .description {
@@ -40,7 +35,7 @@
 }
 
 .hero .img-wrapper {
-  margin: 50px 0 0;
+  margin: 50px 10% 0;
 }
 
 .hero .img-wrapper .img {
@@ -52,11 +47,16 @@
   padding: 50px 25px;
 }
 
-.about .img-wrapper {
+.about .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.about .wrapper .img-container {
   position: relative;
 }
 
-.about .img-wrapper .img-background {
+.about .wrapper .img-container .img-shadow {
   background: var(--first-color);
   position: absolute;
   width: 100%;
@@ -66,25 +66,27 @@
   z-index: 1;
 }
 
-.about .img-wrapper .img {
+.about .wrapper .img-container .img {
   position: relative;
   width: 100%;
   z-index: 2;
 }
 
-.about .text-wrapper .title {
+.about .wrapper .text-container {
   text-align: center;
-  margin: 50px 0 0;
-  font-size: 28px;
 }
 
-.about .text-wrapper .description {
-  text-align: center;
+.about .wrapper .text-container .title {
+  margin: 50px 0 0;
+}
+
+.about .wrapper .text-container .description {
   margin: 25px 0 0;
-  font-size: 15px;
 }
 
 .about .dates {
+  display: flex;
+  flex-direction: column;
 }
 
 .about .dates .date {
@@ -92,14 +94,11 @@
   margin: 50px 0 0;
 }
 
-.about .dates .date .number {
-}
-
 .about .dates .date .divider {
+  display: flex;
   width: 100%;
   margin: 0 auto;
   align-items: center;
-  display: flex;
 }
 
 .about .dates .date .divider svg {
@@ -110,8 +109,8 @@
 
 .about .dates .date .divider::after,
 .about .dates .date .divider::before {
-  content: "";
   display: block;
+  content: "";
   width: 100%;
   height: 1px;
   background: var(--forth-color);
@@ -131,20 +130,18 @@
   padding: 50px 25px;
 }
 
-.flavors .intro .title {
-  font-size: 28px;
-}
-
 .flavors .intro .description {
   margin: 25px 0 0;
 }
 
 .flavors .beer {
+  display: flex;
+  flex-direction: column;
 }
 
 .flavors .beer .img {
   width: 100%;
-  padding: 50px 25px;
+  padding: 50px 20%;
 }
 
 .flavors .beer .text {
@@ -152,13 +149,8 @@
   padding: 50px 25px;
 }
 
-.flavors .beer .text .subtitle {
-  font-size: 16px;
-}
-
 .flavors .beer .text .title {
   margin: 25px 0 0;
-  font-size: 22px;
 }
 
 .flavors .beer .text .description {
@@ -174,22 +166,9 @@
   width: 50%;
 }
 
-.flavors .beer .text .traits .element .name {
-  font-size: 16px;
-}
-
-.flavors .beer .text .traits .element .content {
-}
-
 .features {
   text-align: center;
   padding: 50px 25px;
-}
-
-.features .intro {
-}
-
-.features .intro .title {
 }
 
 .features .intro .description {
@@ -200,34 +179,45 @@
   margin: 50px 0 0;
 }
 
-.features .ingredients .img {
+.features .ingredients .wrapper {
   display: flex;
-  margin: 0 auto;
-  width: 70%;
+  flex-direction: column;
 }
 
-.features .ingredients .first-group {
+.features .ingredients .wrapper .img {
+  display: flex;
+  margin: 0 auto;
+  width: 65%;
+}
+
+.features .ingredients .wrapper .first-group {
   margin: 75px 0 0;
 }
 
-.features .ingredients .first-group .content {
+.features .ingredients .wrapper .first-group .content {
   margin: 50px 0 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.features .ingredients .first-group .content .icon {
+.features .ingredients .wrapper .first-group .content .icon {
   width: 80px;
 }
 
-.features .ingredients .first-group .content .description {
+.features .ingredients .wrapper .first-group .content .description {
   margin: 5px 0 0;
 }
 
 .features .ingredients .second-group {
   margin: 50px 0 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .features .ingredients .second-group .content {
   margin: 40px 0 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .features .ingredients .second-group .content .icon {
@@ -238,23 +228,19 @@
   margin: 5px 50px 0;
 }
 
-.features .choose .img {
-  display: flex;
-  margin: 0 auto;
-  width: 70%;
-}
-
 .features .choose {
   padding: 75px 0 0;
 }
 
 .features .choose .img {
+  display: flex;
+  margin: 0 auto;
+  width: 65%;
 }
+
 .features .choose .text {
   margin: 75px 0 0;
   text-align: center;
-}
-.features .choose .text .title {
 }
 .features .choose .text .description {
   margin: 25px 0 0;
@@ -270,9 +256,6 @@
   width: 100%;
   background: var(--first-color);
   color: var(--third-color);
-}
-
-.footer {
 }
 
 .footer .discover {
@@ -298,13 +281,9 @@
   padding: 50px 25px;
 }
 
-.footer .discover .background h1,
+.footer .discover .background h2,
 .footer .discover .background p {
   color: var(--fifth-color);
-}
-
-.footer .discover .background h1 {
-  font-size: 28px;
 }
 
 .footer .discover .background p {
@@ -322,10 +301,6 @@
 .footer .social-media {
   padding: 50px 25px;
   text-align: center;
-}
-
-.footer .social-media .title {
-  font-size: 28px;
 }
 
 .footer .social-media .button {
@@ -347,22 +322,22 @@
   width: 31%;
 }
 
-.footer .get {
+.footer .wrapper .get {
   background: url("../images/background-2.jpeg");
 }
 
-.footer .contact {
+.footer .wrapper .contact {
   background: url("../images/background-3.jpeg");
 }
 
-.footer .link {
+.footer .wrapper .link {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
 }
 
-.footer .link .background {
+.footer .wrapper .link .background {
   background-color: transparent;
   background-image: linear-gradient(
     180deg,
@@ -370,24 +345,172 @@
     rgba(0, 0, 0, 0.671) 100%
   );
   padding: 50px 25px;
+  height: 100%;
 }
 
-.footer .link .background .title {
-  font-size: 28px;
+.footer .wrapper .link .background .title {
   color: var(--fifth-color);
 }
 
-.footer .link .background .description {
+.footer .wrapper .link .background .description {
   margin: 50px 0 0;
   color: var(--fifth-color);
 }
 
-.footer .link .background .button {
+.footer .wrapper .link .background .button {
   margin: 50px 0 0;
   padding: 15px 30px;
   border-radius: 2px;
-  /* width: 100%; */
   background: var(--first-color);
   color: var(--third-color);
   margin: 50px 0 0;
+}
+
+@media only screen and (min-width: 770px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    padding: 75px 40px;
+    gap: 50px;
+  }
+
+  .hero .text-wrapper {
+    width: 100%;
+  }
+
+  .hero .text-wrapper .button {
+    text-align: center;
+    width: 230px;
+  }
+
+  .hero .img-wrapper {
+    margin: 0;
+  }
+
+  .about {
+    padding: 75px 40px;
+  }
+
+  .about .wrapper {
+    flex-direction: row;
+    gap: 75px;
+  }
+
+  .about .wrapper .img-container {
+    width: 50%;
+  }
+
+  .about .wrapper .img-container .img {
+    width: 40vw;
+    height: calc(40vw / 1.5);
+  }
+
+  .about .wrapper .img-container .img-shadow {
+    height: calc(40vw / 1.5);
+  }
+
+  .about .wrapper .text-container {
+    width: 50%;
+    text-align: left;
+  }
+
+  .about .dates {
+    flex-direction: row;
+  }
+
+  .about .dates .date .description {
+    padding: 0 20px;
+  }
+
+  .flavors .intro {
+    padding: 75px 40px;
+  }
+
+  .flavors .beer {
+    flex-direction: row;
+  }
+  .flavors .reverse {
+    flex-direction: row-reverse;
+  }
+
+  .flavors .beer .img {
+    width: 50%;
+    padding: 80px;
+  }
+
+  .flavors .beer .text {
+    padding: 50px;
+  }
+
+  .features {
+    padding: 75px 40px;
+  }
+  .features .ingredients .wrapper {
+    flex-direction: row;
+  }
+
+  .features .ingredients .wrapper .img {
+    width: 50%;
+    padding: 40px 20px;
+  }
+
+  .features .ingredients .wrapper .first-group {
+    margin: 0;
+  }
+
+  .features .ingredients .wrapper .first-group .content {
+    flex-direction: row;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .features .ingredients .wrapper .first-group .content .icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .features .ingredients .second-group {
+    flex-direction: row;
+    margin: 30px 0 0;
+  }
+  .features .ingredients .second-group .content {
+    margin: 0;
+    flex-direction: row;
+  }
+
+  .features .ingredients .second-group .content .icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .features .ingredients .second-group .content .description {
+    margin: 0 10px;
+  }
+
+  .features .choose {
+    padding: 100px 0 0;
+  }
+
+  .features .choose .img {
+    width: 55%;
+  }
+
+  .features .choose .text .wrapper .button {
+    width: 250px;
+  }
+
+  .footer .discover .background {
+    padding: 100px 120px;
+  }
+
+  .footer .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer .wrapper .button {
+    margin: 0;
+    width: 300px;
+  }
 }
